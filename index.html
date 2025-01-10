@@ -4,146 +4,308 @@
   <meta charset="UTF-8">
   <meta name="description" content="El Dragón Cojo: comunidad de juegos de mesa, rol y mucha diversión en Mallorca. Únete a nuestras partidas y eventos épicos.">
   <meta name="keywords" content="juegos de mesa, rol, Mallorca, club, eventos, comunidad, El Dragón Cojo">
-  <meta name="author" content="El Dragón Cojo">
+  <meta name="author" content="Malkev">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>El Dragón Cojo - Juegos de Mesa y Rol en Mallorca</title>
 
-  <!-- Enlaces a redes sociales (Open Graph) para mejor previsualización -->
+  <!-- Etiquetas Open Graph -->
   <meta property="og:title" content="El Dragón Cojo - Tu espacio de juegos de mesa y rol en Mallorca">
   <meta property="og:description" content="Únete a nuestra comunidad para organizar y jugar partidas épicas con gente increíble.">
-  <meta property="og:image" content="./escudo-de-armas.png">
+  <meta property="og:image" content="https://dragoncojo.com/escudo-de-armas.png">
   <meta property="og:url" content="https://dragoncojo.com">
+
+  <!-- Etiquetas Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Dragón Cojo - Tu espacio de juegos de mesa y rol en Mallorca">
+  <meta name="twitter:description" content="Únete a nuestra comunidad para organizar y jugar partidas épicas con gente increíble.">
+  <meta name="twitter:image" content="https://dragoncojo.com/escudo-de-armas.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./escudo-de-armas.png">
+  <link rel="icon" type="image/png" href="./favicon.png">
 
-  <!-- Estilos CSS -->
+  <!-- Fuentes Google (MedievalSharp + Old Standard TT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Old+Standard+TT:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome (iconos) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Archivo de estilos -->
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body id="top">
 
-  <!-- ENCABEZADO / HERO -->
+  <!-- MENÚ STICKY (solo en desktop) CON SELECTOR DE IDIOMAS (DESPLEGABLE) -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <!-- Al hacer clic en 'El Dragón Cojo', va al TOP -->
+      <div class="nav-logo">
+        <a href="#top">El Dragón Cojo</a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#reglas">Mandamientos</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      
+      <!-- Desplegable de idiomas -->
+      <div class="nav-idiomas dropdown">
+        <button class="dropbtn">Idiomas <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <!-- ES es la default -->
+          <a href="/">
+            <img src="./banderas/es.png" alt="Español" class="banderita">
+            Español
+          </a>
+          <!-- Ca -->
+          <a href="/ca/index.html">
+            <img src="./banderas/ca.png" alt="Català" class="banderita">
+            Català
+          </a>
+          <!-- En -->
+          <a href="/en/index.html">
+            <img src="./banderas/en.png" alt="English" class="banderita">
+            English
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
   <header>
     <div class="container">
-      <img src="./escudo-de-armas.png" alt="Logo El Dragón Cojo" width="150" style="margin-bottom:20px;">
-      <h1>El Dragón Cojo</h1>
-      <p>El mejor lugar para disfrutar de <strong>juegos de mesa</strong>, <strong>rol</strong> y buena compañía en <strong>Mallorca</strong>.</p>
-      <a href="#comunidad" class="btn-hero">Únete a la aventura</a>
+      <img 
+        src="./escudo-de-armas.png" 
+        alt="Logo El Dragón Cojo" 
+        class="escudo-logo"
+      >
+      <h1 class="titulo-principal">El Dragón Cojo</h1>
+      <p class="subtitulo-principal">
+        El mejor lugar para disfrutar de <strong>juegos de mesa</strong>, <strong>rol</strong> y mucha imaginación. 
+        Vive aventuras épicas con dados, historias y camaradería.
+      </p>
+
+      <!-- Reproductor MP3 centrado y discreto -->
+      <div style="text-align:center; margin: 10px 0;">
+        <audio controls style="max-width:250px;">
+          <source src="./song.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+
+      <a href="#comunidad" class="btn-cta">Únete a la aventura</a>
     </div>
   </header>
 
   <!-- SOBRE NOSOTROS -->
-  <section id="sobre-nosotros">
+  <section id="sobre-nosotros" class="fade-in-section">
     <div class="container">
       <h2>¿Quiénes somos?</h2>
       <p>
         “El Dragón Cojo” es una comunidad de entusiastas de los <strong>juegos de mesa</strong> y <strong>rol</strong> en la isla de <strong>Mallorca</strong>. 
-        Aquí encontrarás un ambiente <em>seguro</em>, <em>respetuoso</em> y muy <em>divertido</em> para compartir tardes épicas, organizar tus propias partidas y conocer nuevos amigos con la misma pasión por la fantasía, los dados y la buena cerveza.
+        Aquí encontrarás un ambiente <em>seguro</em>, <em>respetuoso</em> y muy <em>divertido</em> para compartir tardes inolvidables, organizar tus propias partidas 
+        y conocer nuevos amigos con la misma pasión por los <strong>dados</strong>, la <strong>imaginación</strong> y todo lo relacionado con este maravilloso mundo lúdico.
       </p>
       <p>
         Tanto si eres un veterano con experiencia en múltiples campañas, 
-        como si eres un curioso que empieza a tirar dados, este es tu lugar. 
+        como si eres un curioso que empieza a explorar distintos tableros y manuales, este es tu lugar. 
         ¡Te esperamos con los brazos abiertos y las fichas preparadas!
       </p>
     </div>
   </section>
 
-  <!-- REGLAS / CÓMO FUNCIONA -->
-  <section id="reglas">
+  <!-- MANDAMIENTOS DEL CLUB -->
+  <section id="reglas" class="fade-in-section">
     <div class="container">
-      <h2>Normas del Club</h2>
+      <h2>Mandamientos del Club</h2>
+      
       <div class="rules-list">
 
-        <div class="rule-card">
-          <h3>Creación de Eventos y Anfitriones</h3>
+        <!-- Mandamiento I -->
+        <div class="rule-card anim-pop">
+          <h3>I. Creación de Eventos y Asistencia</h3>
           <ul>
-            <li>Si tienes un juego en mente, pide a un organizador un nuevo evento donde tú serás el anfitrión.</li>
-            <li>El anfitrión se encarga de facilitar la experiencia y reportar incidencias.</li>
-            <li>Puede haber reglas específicas en cada evento, quedando claras en la descripción.</li>
-            <li>El anfitrión se reserva el derecho de admisión.</li>
-          </ul>
-        </div>
+            <!-- Creación de Eventos y Anfitriones -->
+            <li>Si tienes un juego en mente, házselo saber a un organizador y te creará un evento donde tú serás el anfitrión.</li>
+            <li>La responsabilidad del anfitrión se limita a: 
+              <ul style="list-style:circle; margin-left:25px;">
+                <li>Estar presente y facilitar la experiencia.</li>
+                <li>Informar a un organizador de cualquier anomalía.</li>
+              </ul>
+            </li>
+            <li>Cualquier regla puede tener una excepción si el anfitrión lo considera necesario para un evento específico (debe quedar claro en la descripción).</li>
+            <li>Cualquier requisito específico también debe quedar claro en la descripción.</li>
+            <li>El anfitrión puede denegar la asistencia por los motivos que considere oportunos.</li>
 
-        <div class="rule-card">
-          <h3>Asistencia y Puntualidad</h3>
-          <ul>
-            <li>Cancelar con menos de 24h => 1 strike.</li>
+            <!-- Asistencia y Puntualidad -->
+            <li>Cancelaciones con menos de 24 horas => 1 strike.</li>
             <li>Retrasos excesivos => 1 strike.</li>
-            <li>Ausencia sin avisar => expulsión inmediata.</li>
+            <li>Ausencias con disculpa justificada => 1 strike.</li>
+            <li>Ausencias sin avisar => expulsión inmediata.</li>
             <li>2 strikes => expulsión.</li>
-            <li>El anfitrión decide sobre retrasos y justificaciones.</li>
-          </ul>
-        </div>
+            <li>Retrasos y excusas quedan a juicio del anfitrión.</li>
 
-        <div class="rule-card">
-          <h3>Lista de Espera</h3>
-          <ul>
-            <li>Si estás en lista de espera y no asistirás, retírate pronto.</li>
+            <!-- Lista de Espera -->
+            <li>Si estás en la lista de espera y no asistirás, retírate para dar oportunidad a otros.</li>
             <li>Se da prioridad a quienes tengan menos strikes.</li>
           </ul>
         </div>
 
-        <div class="rule-card">
-          <h3>Menores de Edad</h3>
+        <!-- Mandamiento II -->
+        <div class="rule-card anim-pop">
+          <h3>II. Participantes, Invitados y Privacidad</h3>
           <ul>
-            <li>No admitidos a menos que el anfitrión lo permita explícitamente.</li>
+            <!-- Menores de Edad -->
+            <li>No se admiten menores, a menos que el anfitrión especifique lo contrario.</li>
+            <!-- Invitados y Privacidad -->
+            <li>Es preferible que tus invitados se registren y tengan cuenta propia. El anfitrión no está obligado a aceptar invitados.</li>
+            <li>En caso de que se permita, indica siempre la cantidad de invitados que traerás.</li>
+            <li>Si necesitas mantener tu identidad en secreto, comunícalo al anfitrión para que te añada como su invitado.</li>
+            <li>No se permite asistir solo para mirar ni traer a alguien para lo mismo.</li>
+            <!-- Comportamiento -->
+            <li>El respeto es crucial. Cualquier forma de acoso, abuso o violencia resultará en expulsión inmediata.</li>
           </ul>
         </div>
 
-        <div class="rule-card">
-          <h3>Invitados y Privacidad</h3>
+        <!-- Mandamiento III -->
+        <div class="rule-card anim-pop septimo-mandamiento">
+          <h3>III. Resolución de Conflictos</h3>
           <ul>
-            <li>Se prefiere que cada invitado tenga cuenta propia.</li>
-            <li>Si deseas anonimato, contacta con el anfitrión.</li>
-            <li>No se permite asistir solo para mirar.</li>
-          </ul>
-        </div>
-
-        <div class="rule-card">
-          <h3>Comportamiento</h3>
-          <ul>
-            <li>Cero acoso, abuso o violencia.</li>
-            <li>Faltas graves => expulsión directa.</li>
-          </ul>
-        </div>
-
-        <div class="rule-card">
-          <h3>Resolución de Conflictos</h3>
-          <ul>
-            <li>Contacta con un organizador ante cualquier problema.</li>
-            <li>Si eres expulsado, siempre hay opción de dialogar.</li>
+            <li>Cualquier problema o duda, consulta con un organizador.</li>
+            <li>Si eres expulsado, puedes contactar con un organizador para buscar una solución.</li>
           </ul>
         </div>
 
       </div>
-      <p style="text-align:center; margin-top: 20px;"><strong>¡Alea Iacta Est!</strong></p>
+      <!-- Alea Iacta Est con efecto mágico multicolor -->
+      <p class="alea-iacta-est">¡Alea Iacta Est!</p>
     </div>
   </section>
 
   <!-- COMUNIDAD / ENLACES -->
-  <section id="comunidad">
-    <div class="container">
+  <section id="comunidad" class="fade-in-section">
+    <div class="container" style="text-align:center;">
       <h2>Únete a Nuestra Comunidad</h2>
-      <p>Comparte tus aventuras, organiza partidas y disfruta de la mejor compañía rolera.</p>
-      <div class="comunidad-links" style="margin-top: 20px;">
-        <a href="https://t.me/joinchat/Ha-OPPG6MmcefDLp" target="_blank" rel="noopener">Grupo de Telegram</a>
-        <a href="https://chat.whatsapp.com/CW162Jjz1VRFv0gMk9L0Qs" target="_blank" rel="noopener">Grupo de WhatsApp</a>
+      <p>
+        Comparte tus aventuras, organiza partidas y disfruta de la mejor compañía jugona.
+      </p>
+
+      <!-- Grupos de juego -->
+      <div class="comunidad-links">
+        <a href="https://t.me/joinchat/Ha-OPPG6MmcefDLp" target="_blank" rel="noopener">
+          <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+        <a href="https://chat.whatsapp.com/CW162Jjz1VRFv0gMk9L0Qs" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Redes sociales -->
+      <h3 style="margin-top: 30px; font-family:var(--font-titles); color:var(--color-dorado);">Redes Sociales</h3>
+      <p style="font-size:0.9rem; color:#efefef;">
+        Síguenos para no perderte nuestras últimas partidas y eventos
+      </p>
+      <div class="comunidad-links">
+        <a href="https://www.instagram.com/dragon.cojo/" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.youtube.com/@eldragoncojo" target="_blank" rel="noopener">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- SECCIÓN DE CONTACTO (FORMULARIO) -->
+  <section id="contacto" class="fade-in-section">
+    <div class="container" style="text-align:center;">
+      <h2>Contáctame</h2>
+      <p>Si deseas más información o tienes alguna duda, por favor rellena el siguiente formulario.</p>
+      
+      <!-- FormSubmit para mandar mail "directo" sin mailto -->
+      <form 
+        action="https://formsubmit.co/drac.coix@gmail.com" 
+        method="POST"
+        class="contact-form"
+      >
+        <!-- Evita SPAM: genera un UUID en formsubmit.co y añade un campo hidden: -->
+        <input type="hidden" name="_next" value="https://www.tu-web.com/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="Nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Tu email:</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="Mensaje" rows="5" required></textarea>
+        </div>
+
+        <!-- Botón: a la derecha en desktop, centrado en móvil -->
+        <div class="form-actions">
+          <button type="submit" class="btn-cta">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER MÁS COMPACTO -->
   <footer>
-    <div class="container">
-      <p>El Dragón Cojo &copy; 2017 - <span id="year"></span> en Mallorca</p>
+    <div class="container footer-compact">
+      <p>El Dragón Cojo / Mallorca / 2017 - <span id="year"></span></p>
+      <p>Creado por 
+        <a href="https://malkevnia.com" target="_blank" rel="noopener" style="color:var(--color-dorado);">
+          Malkev
+        </a> 
+        con 💜
+      </p>
     </div>
   </footer>
 
-  <!-- JavaScript para año dinámico -->
+  <!-- JavaScript para año dinámico y animaciones en scroll -->
   <script>
+    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // IntersectionObserver para fade-in
+    const faders = document.querySelectorAll(".fade-in-section");
+    const options = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, options);
+
+    faders.forEach(el => {
+      appearOnScroll.observe(el);
+    });
   </script>
 
 </body>
