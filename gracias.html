@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="El Dragón Cojo - Página de agradecimiento.">
+  <meta name="keywords" content="El Dragón Cojo, agradecimiento, gracias">
+  <meta name="author" content="Malkev">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>¡Gracias por tu mensaje! - El Dragón Cojo</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+
+  <!-- Fuentes Google (MedievalSharp + Old Standard TT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Old+Standard+TT:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome (iconos) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id="top">
+
+  <!-- NAV OPCIONAL 
+       Si quieres mantener el nav sticky, inclúyelo aquí
+       O puedes omitirlo si deseas una simple página de gracias.
+  -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <!-- Vuelve a la página principal -->
+        <a href="./index.html">El Dragón Cojo</a>
+      </div>
+      
+      <!-- Puedes dejarlo vacío o con un simple enlace 
+           Ejemplo: 
+      <ul class="nav-links">
+        <li><a href="./index.html">Inicio</a></li>
+      </ul>
+      -->
+      <ul class="nav-links">
+        <li><a href="./index.html">Inicio</a></li>
+      </ul>
+      
+      <div class="nav-idiomas dropdown">
+        <!-- Podrías poner el selector de idiomas también, si quieres -->
+        <button class="dropbtn">Idiomas <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="/">
+            <img src="./banderas/es.png" alt="Español" class="banderita">
+            Español
+          </a>
+          <a href="/ca/index.html">
+            <img src="./banderas/ca.png" alt="Català" class="banderita">
+            Català
+          </a>
+          <a href="/en/index.html">
+            <img src="./banderas/en.png" alt="English" class="banderita">
+            English
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN DE "GRACIAS" -->
+  <header>
+    <div class="container" style="text-align:center;">
+      <h1 class="titulo-principal">¡Gracias por tu mensaje!</h1>
+      <p class="subtitulo-principal" style="max-width:600px; margin:0 auto;">
+        Hemos recibido tu información y en breve te responderemos. 
+        Mientras tanto, puedes volver a nuestra página principal o seguir explorando El Dragón Cojo.
+      </p>
+      <!-- Botón para regresar al sitio principal -->
+      <div style="margin-top: 30px;">
+        <a href="./index.html" class="btn-cta">
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FOOTER (Opcional, para mantener coherencia) -->
+  <footer>
+    <div class="container footer-compact">
+      <p>El Dragón Cojo / Mallorca / 2017 - <span id="year"></span></p>
+      <p>Creado por 
+        <a href="https://malkevnia.com" target="_blank" rel="noopener" style="color:var(--color-dorado);">
+          Malkev
+        </a> 
+        con 💜
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para año dinámico -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
